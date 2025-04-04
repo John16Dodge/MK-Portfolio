@@ -1,0 +1,576 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#name {
+    display: inline-block;
+    animation: fadeText 1s ease-in-out infinite; /* Same animation as greeting */
+    color: #ffd700; /* Gold color */
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5);
+}
+
+body {
+    color: #f5f5f5; /* Light text for contrast */
+    background: #0a1a2f; /* Dark blue background */
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(135deg, #0a1a2f, #1e3a5f); /* Dark blue gradient */
+    color: #f5f5f5;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffd700; /* Gold color for your name */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700; /* Gold on hover */
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080?text=Your+Hero+Image') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f5f5f5;
+    margin-top: 80px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: #ffd700; /* Gold for your name */
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5);
+}
+
+#greeting {
+    display: inline-block;
+    animation: fadeText 1s ease-in-out infinite; /* Animation for greeting */
+}
+
+.hero-content p {
+    font-size: 1.6em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+#motivational-quote {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #ffd700; /* Gold color */
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.3);
+}
+
+.cta-btn {
+    padding: 15px 40px;
+    background: #ffd700; /* Gold button */
+    color: #0a1a2f; /* Dark blue text */
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.15);
+    background: #ff4500; /* Vibrant orange on hover */
+}
+
+/* Skills Section */
+.skills {
+    padding: 100px 50px;
+    text-align: center;
+    background: #1e3a5f; /* Medium dark blue */
+}
+
+.skills h2 {
+    font-size: 3em;
+    margin-bottom: 50px;
+    color: #ffd700; /* Gold heading */
+    font-weight: 700;
+    position: relative;
+}
+
+.skills h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #ffd700; /* Gold underline */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    width: 300px;
+    background: #2a4d7a; /* Slightly lighter dark blue */
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+}
+
+.skill-item h3 {
+    font-size: 1.4em;
+    color: #ffd700; /* Gold titles */
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 100px 50px;
+    text-align: center;
+    background: #1e3a5f; /* Medium dark blue */
+}
+
+.portfolio h2 {
+    font-size: 3em;
+    margin-bottom: 50px;
+    color: #ffd700; /* Gold heading */
+    font-weight: 700;
+    position: relative;
+}
+
+.portfolio h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #ffd700; /* Gold underline */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: 340px;
+    background: #2a4d7a; /* Slightly lighter dark blue */
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item h3 {
+    font-size: 1.5em;
+    color: #ffd700; /* Gold titles */
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 100px 50px;
+    text-align: center;
+    background: linear-gradient(135deg, #0a1a2f, #1e3a5f); /* Dark blue gradient */
+}
+
+.projects h2 {
+    font-size: 3em;
+    margin-bottom: 50px;
+    color: #ffd700; /* Gold heading */
+    font-weight: 700;
+    position: relative;
+}
+
+.projects h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #ffd700; /* Gold underline */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    width: 340px;
+    background: #2a4d7a; /* Slightly lighter dark blue */
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.project-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.project-item:hover img {
+    transform: scale(1.05);
+}
+
+.project-item h3 {
+    font-size: 1.5em;
+    color: #ffd700; /* Gold titles */
+    margin-bottom: 10px;
+}
+
+.project-item a {
+    color: #ffd700; /* Gold links */
+    text-decoration: none;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+}
+
+/* Services Section */
+.services {
+    padding: 100px 50px;
+    background: linear-gradient(135deg, #0a1a2f, #1e3a5f); /* Dark blue gradient */
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 3em;
+    margin-bottom: 50px;
+    color: #ffd700; /* Gold heading */
+    font-weight: 700;
+    position: relative;
+}
+
+.services h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #ffd700; /* Gold underline */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    width: 300px;
+    padding: 30px;
+    background: #2a4d7a; /* Slightly lighter dark blue */
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+}
+
+.service-item-2 {
+    width: 300px;
+    padding: 30px;
+    background: #2a4d7a; /* Slightly lighter dark blue */
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s;
+}
+
+.service-item-2:hover {
+    transform: translateY(10px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+}
+
+.service-item-2 img, .service-item img {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+h3 {
+    color: #ffd700; /* Gold titles */
+    font-size: 1.4em;
+}
+
+/* Internships Section */
+.internships {
+    padding: 100px 50px;
+    text-align: center;
+    background: #1e3a5f; /* Medium dark blue */
+}
+
+.internships h2 {
+    font-size: 3em;
+    margin-bottom: 50px;
+    color: #ffd700; /* Gold heading */
+    font-weight: 700;
+    position: relative;
+}
+
+.internships h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #ffd700; /* Gold underline */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.internships-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.internship-item {
+    width: 340px;
+    background: #2a4d7a; /* Slightly lighter dark blue */
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.internship-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+}
+
+.internship-item h3 {
+    font-size: 1.5em;
+    color: #ffd700; /* Gold titles */
+    margin-bottom: 10px;
+}
+
+.internship-item p {
+    font-size: 1.1em;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 50px;
+    text-align: center;
+    background: #1e3a5f; /* Medium dark blue */
+}
+
+.contact h2 {
+    font-size: 3em;
+    margin-bottom: 50px;
+    color: #ffd700; /* Gold heading */
+    font-weight: 700;
+}
+
+.contact a {
+    color: #ffd700; /* Gold links */
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+#contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.linkedin-icon {
+    width: 50px; height: 50px; border-radius: 24%;
+    transition: transform 0.3s;
+}
+
+.mk-logo {
+    width: 50px; height: 50px; border-radius: 24%;
+    transition: transform 0.3s;
+}
+
+.linkedin-icon:hover, .mk-logo:hover {
+    transform: scale(1.2);
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    background: #2a4d7a; /* Dark blue input */
+    color: #f5f5f5;
+    font-size: 1.1em;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    background: #3b5998; /* Slightly lighter blue on focus */
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+    outline: none;
+}
+
+#contact-form textarea {
+    height: 140px;
+}
+
+.submit-btn {
+    padding: 18px;
+    background: #ffd700; /* Gold button */
+    color: #0a1a2f; /* Dark blue text */
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background: #ff4500; /* Vibrant orange on hover */
+    transform: scale(1.1);
+}
+
+#form-message {
+    margin-top: 20px;
+    color: #ffd700; /* Gold success message */
+    font-weight: 600;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #0a1a2f; /* Dark blue */
+    color: #f5f5f5;
+}
+
+footer a {
+    color: #ffd700; /* Gold link */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeText {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
