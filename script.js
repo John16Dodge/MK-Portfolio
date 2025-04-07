@@ -1,3 +1,4 @@
+// Function to handle form submission
 function handleSubmit(event) {
     event.preventDefault();
     const form = document.getElementById('contact-form');
@@ -22,6 +23,7 @@ function handleSubmit(event) {
     }, 2000);
 }
 
+// Function for smooth scrolling
 function smoothScroll(target, duration) {
     const start = window.pageYOffset;
     const distance = target - start;
@@ -45,6 +47,7 @@ function smoothScroll(target, duration) {
     requestAnimationFrame(animation);
 }
 
+// Smooth scrolling for buttons and navbar links
 document.querySelectorAll('.cta-btn').forEach(btn => {
     btn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -65,6 +68,7 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
+// Greetings and name animation
 const greetings = [
     "Hello",      // English
     "வணக்கம்", // Tamil (Vanakkam)
@@ -128,4 +132,36 @@ function displayRandomQuote() {
 }
 
 // Call the function on page load
-window.onload = displayRandomQuote;
+window.onload = () => {
+    displayRandomQuote();
+    showNotification(); // Show notification when the page loads
+};
+
+// Notification Feature
+function showNotification() {
+    if (!("Notification" in window)) {
+        console.log("This browser does not support desktop notifications.");
+    } else if (Notification.permission === "granted") {
+        const notification = new Notification("Welcome to Magesh's Portfolio!", {
+            body: "Explore my skills, projects, and services. Let's connect!",
+            icon: "MKJ.png", // Add your logo or any image here
+        });
+
+        notification.onclick = () => {
+            window.focus();
+        };
+    } else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then((permission) => {
+            if (permission === "granted") {
+                const notification = new Notification("Welcome to Magesh's Portfolio!", {
+                    body: "Explore my skills, projects, and services. Let's connect!",
+                    icon: "MKJ.png", // Add your logo or any image here
+                });
+
+                notification.onclick = () => {
+                    window.focus();
+                };
+            }
+        });
+    }
+}
