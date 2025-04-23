@@ -11,14 +11,14 @@ html {
 
 #name {
     display: inline-block;
-    animation: fadeText 1s ease-in-out infinite; /* Same animation as greeting */
-    color: #ffd700; /* Gold color */
+    animation: fadeText 1s ease-in-out infinite;
+    color: #ffd700;
     text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5);
 }
 
 body {
-    color: #f5f5f5; /* Light text for contrast */
-    background: #0a1a2f; /* Dark blue background */
+    color: #f5f5f5;
+    background: #0a1a2f;
     overflow-x: hidden;
 }
 
@@ -28,7 +28,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: linear-gradient(135deg, #0a1a2f, #1e3a5f); /* Dark blue gradient */
+    background: linear-gradient(135deg, #0a1a2f, #1e3a5f);
     color: #f5f5f5;
     position: fixed;
     width: 100%;
@@ -42,7 +42,7 @@ nav {
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #ffd700; /* Gold color for your name */
+    color: #ffd700;
 }
 
 .nav-links {
@@ -60,7 +60,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #ffd700; /* Gold on hover */
+    color: #ffd700;
     transform: scale(1.1);
 }
 
@@ -77,6 +77,11 @@ nav {
     animation: fadeIn 2s ease-in-out;
 }
 
+.hero-content {
+    max-width: 90%;
+    padding: 20px;
+}
+
 .hero-content h1 {
     font-size: 4.5em;
     font-weight: 700;
@@ -85,13 +90,13 @@ nav {
 }
 
 .hero-content h1 span {
-    color: #ffd700; /* Gold for your name */
+    color: #ffd700;
     text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5);
 }
 
 #greeting {
     display: inline-block;
-    animation: fadeText 1s ease-in-out infinite; /* Animation for greeting */
+    animation: fadeText 1s ease-in-out infinite;
 }
 
 .hero-content p {
@@ -104,7 +109,7 @@ nav {
 #motivational-quote {
     font-size: 1.2em;
     font-style: italic;
-    color: #ffd700; /* Gold color */
+    color: #ffd700;
     margin-bottom: 30px;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
@@ -112,33 +117,35 @@ nav {
 }
 
 .cta-btn {
+    display: inline-block;
     padding: 15px 40px;
-    background: #ffd700; /* Gold button */
-    color: #0a1a2f; /* Dark blue text */
+    background: #ffd700;
+    color: #0a1a2f;
     text-decoration: none;
     border-radius: 50px;
     font-size: 1.2em;
     font-weight: 600;
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
     transition: transform 0.3s, background 0.3s;
+    margin: 10px;
 }
 
 .cta-btn:hover {
     transform: scale(1.15);
-    background: #ff4500; /* Vibrant orange on hover */
+    background: #ff4500;
 }
 
 /* Skills Section */
 .skills {
     padding: 100px 50px;
     text-align: center;
-    background: #1e3a5f; /* Medium dark blue */
+    background: #1e3a5f;
 }
 
 .skills h2 {
     font-size: 3em;
     margin-bottom: 50px;
-    color: #ffd700; /* Gold heading */
+    color: #ffd700;
     font-weight: 700;
     position: relative;
 }
@@ -147,7 +154,7 @@ nav {
     content: '';
     width: 50px;
     height: 4px;
-    background: #ffd700; /* Gold underline */
+    background: #ffd700;
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -163,7 +170,7 @@ nav {
 
 .skill-item {
     width: 300px;
-    background: #2a4d7a; /* Slightly lighter dark blue */
+    background: #2a4d7a;
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
@@ -177,20 +184,20 @@ nav {
 
 .skill-item h3 {
     font-size: 1.4em;
-    color: #ffd700; /* Gold titles */
+    color: #ffd700;
 }
 
 /* Portfolio Section */
 .portfolio {
     padding: 100px 50px;
     text-align: center;
-    background: #1e3a5f; /* Medium dark blue */
+    background: #1e3a5f;
 }
 
 .portfolio h2 {
     font-size: 3em;
     margin-bottom: 50px;
-    color: #ffd700; /* Gold heading */
+    color: #ffd700;
     font-weight: 700;
     position: relative;
 }
@@ -199,7 +206,7 @@ nav {
     content: '';
     width: 50px;
     height: 4px;
-    background: #ffd700; /* Gold underline */
+    background: #ffd700;
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -215,7 +222,7 @@ nav {
 
 .portfolio-item {
     width: 340px;
-    background: #2a4d7a; /* Slightly lighter dark blue */
+    background: #2a4d7a;
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -242,7 +249,7 @@ nav {
 
 .portfolio-item h3 {
     font-size: 1.5em;
-    color: #ffd700; /* Gold titles */
+    color: #ffd700;
     margin-bottom: 10px;
 }
 
@@ -250,13 +257,13 @@ nav {
 .projects {
     padding: 100px 50px;
     text-align: center;
-    background: linear-gradient(135deg, #0a1a2f, #1e3a5f); /* Dark blue gradient */
+    background: linear-gradient(135deg, #0a1a2f, #1e3a5f);
 }
 
 .projects h2 {
     font-size: 3em;
     margin-bottom: 50px;
-    color: #ffd700; /* Gold heading */
+    color: #ffd700;
     font-weight: 700;
     position: relative;
 }
@@ -265,7 +272,7 @@ nav {
     content: '';
     width: 50px;
     height: 4px;
-    background: #ffd700; /* Gold underline */
+    background: #ffd700;
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -275,13 +282,13 @@ nav {
 .projects-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 .project-item {
-    width: 340px;
-    background: #2a4d7a; /* Slightly lighter dark blue */
+    width: 300px;
+    background: #2a4d7a;
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -308,12 +315,12 @@ nav {
 
 .project-item h3 {
     font-size: 1.5em;
-    color: #ffd700; /* Gold titles */
+    color: #ffd700;
     margin-bottom: 10px;
 }
 
 .project-item a {
-    color: #ffd700; /* Gold links */
+    color: #ffd700;
     text-decoration: none;
 }
 
@@ -324,14 +331,14 @@ nav {
 /* Services Section */
 .services {
     padding: 100px 50px;
-    background: linear-gradient(135deg, #0a1a2f, #1e3a5f); /* Dark blue gradient */
+    background: linear-gradient(135deg, #0a1a2f, #1e3a5f);
     text-align: center;
 }
 
 .services h2 {
     font-size: 3em;
     margin-bottom: 50px;
-    color: #ffd700; /* Gold heading */
+    color: #ffd700;
     font-weight: 700;
     position: relative;
 }
@@ -340,7 +347,7 @@ nav {
     content: '';
     width: 50px;
     height: 4px;
-    background: #ffd700; /* Gold underline */
+    background: #ffd700;
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -350,39 +357,25 @@ nav {
 .services-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
-.service-item {
+.service-item, .service-item-2 {
     width: 300px;
     padding: 30px;
-    background: #2a4d7a; /* Slightly lighter dark blue */
+    background: #2a4d7a;
     border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.4s;
 }
 
-.service-item:hover {
+.service-item:hover, .service-item-2:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
 }
 
-.service-item-2 {
-    width: 300px;
-    padding: 30px;
-    background: #2a4d7a; /* Slightly lighter dark blue */
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.4s;
-}
-
-.service-item-2:hover {
-    transform: translateY(10px);
-    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
-}
-
-.service-item-2 img, .service-item img {
+.service-item img, .service-item-2 img {
     width: 150px;
     height: 100px;
     margin-bottom: 20px;
@@ -390,7 +383,7 @@ nav {
 }
 
 h3 {
-    color: #ffd700; /* Gold titles */
+    color: #ffd700;
     font-size: 1.4em;
 }
 
@@ -398,13 +391,13 @@ h3 {
 .internships {
     padding: 100px 50px;
     text-align: center;
-    background: #1e3a5f; /* Medium dark blue */
+    background: #1e3a5f;
 }
 
 .internships h2 {
     font-size: 3em;
     margin-bottom: 50px;
-    color: #ffd700; /* Gold heading */
+    color: #ffd700;
     font-weight: 700;
     position: relative;
 }
@@ -413,7 +406,7 @@ h3 {
     content: '';
     width: 50px;
     height: 4px;
-    background: #ffd700; /* Gold underline */
+    background: #ffd700;
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -429,7 +422,7 @@ h3 {
 
 .internship-item {
     width: 340px;
-    background: #2a4d7a; /* Slightly lighter dark blue */
+    background: #2a4d7a;
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -443,7 +436,7 @@ h3 {
 
 .internship-item h3 {
     font-size: 1.5em;
-    color: #ffd700; /* Gold titles */
+    color: #ffd700;
     margin-bottom: 10px;
 }
 
@@ -457,18 +450,18 @@ h3 {
 .contact {
     padding: 100px 50px;
     text-align: center;
-    background: #1e3a5f; /* Medium dark blue */
+    background: #1e3a5f;
 }
 
 .contact h2 {
     font-size: 3em;
     margin-bottom: 50px;
-    color: #ffd700; /* Gold heading */
+    color: #ffd700;
     font-weight: 700;
 }
 
 .contact a {
-    color: #ffd700; /* Gold links */
+    color: #ffd700;
     text-decoration: none;
 }
 
@@ -484,13 +477,10 @@ h3 {
     gap: 20px;
 }
 
-.linkedin-icon {
-    width: 50px; height: 50px; border-radius: 24%;
-    transition: transform 0.3s;
-}
-
-.mk-logo {
-    width: 50px; height: 50px; border-radius: 24%;
+.linkedin-icon, .mk-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 24%;
     transition: transform 0.3s;
 }
 
@@ -502,14 +492,14 @@ h3 {
     padding: 18px;
     border: none;
     border-radius: 15px;
-    background: #2a4d7a; /* Dark blue input */
+    background: #2a4d7a;
     color: #f5f5f5;
     font-size: 1.1em;
     transition: background 0.3s, box-shadow 0.3s;
 }
 
 #contact-form input:focus, #contact-form textarea:focus {
-    background: #3b5998; /* Slightly lighter blue on focus */
+    background: #3b5998;
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
     outline: none;
 }
@@ -520,8 +510,8 @@ h3 {
 
 .submit-btn {
     padding: 18px;
-    background: #ffd700; /* Gold button */
-    color: #0a1a2f; /* Dark blue text */
+    background: #ffd700;
+    color: #0a1a2f;
     border: none;
     border-radius: 50px;
     font-size: 1.2em;
@@ -532,13 +522,13 @@ h3 {
 }
 
 .submit-btn:hover {
-    background: #ff4500; /* Vibrant orange on hover */
+    background: #ff4500;
     transform: scale(1.1);
 }
 
 #form-message {
     margin-top: 20px;
-    color: #ffd700; /* Gold success message */
+    color: #ffd700;
     font-weight: 600;
     font-size: 1.2em;
     opacity: 0;
@@ -549,12 +539,12 @@ h3 {
 footer {
     padding: 20px;
     text-align: center;
-    background: #0a1a2f; /* Dark blue */
+    background: #0a1a2f;
     color: #f5f5f5;
 }
 
 footer a {
-    color: #ffd700; /* Gold link */
+    color: #ffd700;
     text-decoration: none;
 }
 
@@ -573,4 +563,108 @@ footer a:hover {
     20% { opacity: 1; }
     80% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 2.5em;
+        line-height: 1.3;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    #motivational-quote {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .cta-btn {
+        display: block;
+        margin: 10px auto;
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+
+    /* Navbar */
+    nav {
+        padding: 10px 15px; /* Reduced padding for mobile */
+        flex-direction: row; /* Keep horizontal layout */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 40px; /* Slightly smaller logo */
+        height: 40px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row; /* Keep links horizontal */
+        gap: 15px; /* Reduced gap for mobile */
+        margin-top: 0;
+    }
+
+    .nav-links a {
+        font-size: 0.9em; /* Smaller font size for mobile */
+    }
+
+    /* Skills, Portfolio, Projects, Services, Internships */
+    .skills, .portfolio, .projects, .services, .internships {
+        padding: 50px 20px;
+    }
+
+    .skill-item, .portfolio-item, .project-item, .service-item, .service-item-2, .internship-item {
+        width: 100%;
+        max-width: 340px;
+    }
+}
+
+@media (max-width: 320px) {
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .cta-btn {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+
+    /* Navbar */
+    nav {
+        padding: 8px 10px; /* Further reduced padding */
+    }
+
+    .logo img {
+        width: 35px; /* Even smaller logo */
+        height: 35px;
+    }
+
+    .nav-links {
+        gap: 10px; /* Further reduced gap */
+    }
+
+    .nav-links a {
+        font-size: 0.8em; /* Even smaller font size */
+    }
+
+    /* Contact Form */
+    #contact-form input, #contact-form textarea {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+
+    .submit-btn {
+        font-size: 1em;
+        padding: 15px;
+    }
 }

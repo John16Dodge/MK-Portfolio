@@ -102,13 +102,17 @@ const greetingElement = document.getElementById('greeting');
 const nameElement = document.getElementById('name');
 
 function updateGreeting() {
+    // Skip long greetings/names on mobile
+    if (window.innerWidth <= 768 && (greetings[currentIndex].length > 10 || names[currentIndex].length > 20)) {
+        currentIndex = (currentIndex + 1) % greetings.length;
+    }
     greetingElement.textContent = greetings[currentIndex];
     nameElement.textContent = names[currentIndex];
     currentIndex = (currentIndex + 1) % greetings.length;
 }
 
-setInterval(updateGreeting, 1300); // Change every 1.3 seconds
-updateGreeting(); // Initial call to set the first greeting and name
+setInterval(updateGreeting, 1300);
+updateGreeting();
 
 // Motivational Quotes Array
 const motivationalQuotes = [
@@ -124,27 +128,24 @@ const motivationalQuotes = [
     "Dream big, work hard, stay focused, and surround yourself with good people. – Unknown"
 ];
 
-// Function to Display a Random Quote on Page Load
 function displayRandomQuote() {
     const quoteElement = document.getElementById('motivational-quote');
     const randomIndex = Math.floor(Math.random() * motivationalQuotes.length);
     quoteElement.textContent = motivationalQuotes[randomIndex];
 }
 
-// Call the function on page load
 window.onload = () => {
     displayRandomQuote();
-    showNotification(); // Show notification when the page loads
+    showNotification();
 };
 
-// Notification Feature
 function showNotification() {
     if (!("Notification" in window)) {
         console.log("This browser does not support desktop notifications.");
     } else if (Notification.permission === "granted") {
         const notification = new Notification("Welcome to Magesh's Portfolio!", {
             body: "Explore my skills, projects, and services. Let's connect!",
-            icon: "MKJ.png", // Add your logo or any image here
+            icon: "MKJ.png",
         });
 
         notification.onclick = () => {
@@ -155,7 +156,7 @@ function showNotification() {
             if (permission === "granted") {
                 const notification = new Notification("Welcome to Magesh's Portfolio!", {
                     body: "Explore my skills, projects, and services. Let's connect!",
-                    icon: "MKJ.png", // Add your logo or any image here
+                    icon: "MKJ.png",
                 });
 
                 notification.onclick = () => {
